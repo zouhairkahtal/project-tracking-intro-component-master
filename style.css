@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Barlow Condensed", sans-serif;
+  transition: 0.5s ease-in-out;
 }
 body{
     overflow-x: hidden;
@@ -89,6 +90,7 @@ nav ul li:last-child::after {
         background-color: #ffffff;
         box-shadow: -9px 10px 5px -3px rgba(0,0,0,0.1);
         border-radius: 6px;
+        z-index: 2;
       }
       nav ul li:last-child {
         margin: 0;
@@ -126,11 +128,13 @@ section{
     font-size: 16px;
     letter-spacing: 4px;
     text-transform: uppercase;
+    color: hsl(231, 7%, 65%);
 
 }
 .p1 span{
     color: #ffffff;
-    background-color: #000;
+    background-color: hsl(230, 29%, 20%);
+    letter-spacing: 4px;    letter-spacing: 0;
     padding: 5px 10px;
    border-radius: 30px;
    font-weight: 500;
@@ -146,14 +150,15 @@ section{
     background-size:139%;
     position: relative;
 
+
 }
 .back-ground::after{
     content: "";
-    width: 1000px;
+    width: 100%;
     height: 800px;
     background-color: hsl(207, 33%, 95%);
     position: absolute;
-    bottom: 50%;left: -20px;
+    bottom: 50%;left: 0px;
     border-radius: 100px;
     z-index: -1;
 }
@@ -161,11 +166,13 @@ section{
     font-size: 60px;
     text-transform: uppercase;
     padding-bottom: 30px;
+    color: hsl(230, 29%, 20%);
 }
 .p2{
     font-size: 20px;
     padding-bottom: 30px;
     width: 50%;
+    color: hsl(231, 7%, 65%);
 }
 .btn-div{
     display: flex;
@@ -174,12 +181,22 @@ section{
     gap: 20px;
 }
 .btn-div button{
-  width: 200px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
   border: none;
   color: #ffffff;
   background-color: hsl(0, 100%, 68%);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;  
+  border-radius: 5px;
+  cursor: pointer;
 }
 .btn-div p{
     padding: 0;
+}
+
+
+.btn-div button:hover{
+  background-color: hsl(0, 97%, 75%);
 }
