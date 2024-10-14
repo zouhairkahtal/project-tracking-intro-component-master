@@ -1,3 +1,11 @@
+:root {
+  --primary-color: hsl(230, 29%, 20%);
+  --secondary-color: hsl(231, 7%, 65%);
+  --background-color: hsl(207, 33%, 95%);
+  --button-color: hsl(0, 100%, 68%);
+  --button-hover-color: hsl(0, 97%, 75%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +13,16 @@
   font-family: "Barlow Condensed", sans-serif;
   transition: 0.5s ease-in-out;
 }
+
 body {
   overflow-x: hidden;
 }
+
 .box-0 {
   width: 100%;
   height: 100vh;
 }
+
 nav {
   width: 100%;
   background-color: transparent;
@@ -20,31 +31,38 @@ nav {
   justify-content: space-between;
   padding: 70px 10%;
 }
+
 nav ul {
   display: flex;
   gap: 0 50px;
   list-style: none;
 }
+
 nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
-  color: hsl(230, 29%, 20%);
+  color: var(--primary-color);
 }
+
 nav ul li a:hover {
-  text-decoration: underline hsl(230, 29%, 20%);
+  text-decoration: underline var(--primary-color);
 }
+
 nav ul li:last-child {
   margin-left: 50px;
   position: relative;
 }
+
 nav ul li:last-child a {
-  color: hsl(231, 7%, 65%);
+  color: var(--secondary-color);
 }
+
 nav ul li:last-child a:hover {
-  text-decoration: underline hsl(231, 7%, 65%);
+  text-decoration: underline var(--secondary-color);
 }
+
 nav ul li:last-child::after {
   position: absolute;
   left: -50px;
@@ -52,45 +70,51 @@ nav ul li:last-child::after {
   content: "";
   width: 5px;
   height: 5px;
-  background-color: hsl(231, 7%, 65%);
+  background-color: var(--secondary-color);
   border-radius: 50%; /* For a circular dot */
 }
+
 .open {
   display: none;
   width: 30px;
   height: 30px;
 }
+
 .close {
   display: none;
   width: 30px;
   height: 30px;
 }
+
 .menu {
   display: none;
 }
 
 /* ////////////////////////// */
+
 section {
   display: flex;
   width: 100%;
   height: 83%;
   z-index: 1;
 }
+
 .text {
   width: 50%;
   height: 100%;
   padding: 100px 20px 0 100px;
 }
+
 .p1 {
   font-size: 25px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: hsl(231, 7%, 65%);
+  color: var(--secondary-color);
 }
+
 .p1 span {
   color: #ffffff;
-  background-color: hsl(230, 29%, 20%);
-  letter-spacing: 4px;
+  background-color: var(--primary-color);
   letter-spacing: 0;
   padding: 5px 15px;
   border-radius: 30px;
@@ -98,6 +122,7 @@ section {
   margin-right: 10px;
   line-height: 50px;
 }
+
 .back-ground {
   width: 50%;
   height: 100%;
@@ -107,41 +132,46 @@ section {
   background-size: 139%;
   position: relative;
 }
+
 .back-ground::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: hsl(207, 33%, 95%);
+  background-color: var(--background-color);
   position: absolute;
   bottom: 50%;
   left: 0px;
   border-radius: 100px;
   z-index: -1;
 }
+
 .title {
   font-size: 70px;
   text-transform: uppercase;
   padding-bottom: 30px;
-  color: hsl(230, 29%, 20%);
+  color: var(--primary-color);
 }
+
 .p2 {
   font-size: 25px;
   padding-bottom: 30px;
   width: 50%;
-  color: hsl(231, 7%, 65%);
+  color: var(--secondary-color);
 }
+
 .btn-div {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .btn-div button {
   width: 160px;
   height: 40px;
   border: none;
   color: #ffffff;
-  background-color: hsl(0, 100%, 68%);
+  background-color: var(--button-color);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
@@ -149,12 +179,9 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-.btn-div p {
-  padding: 0;
-}
 
 .btn-div button:hover {
-  background-color: hsl(0, 97%, 75%);
+  background-color: var(--button-hover-color);
 }
 @media (max-width: 800px) {
   .menu {
@@ -193,7 +220,7 @@ section {
     content: "";
     width: 100%;
     height: 1px;
-    background-color: hsl(231, 7%, 65%);
+    background-color: var(--secondary-color);
     border-radius: 0; /* For a circular dot */
   }
   .open {
@@ -230,7 +257,7 @@ section {
     content: "";
     width: 60%;
     height: 800px;
-    background-color: hsl(207, 33%, 95%);
+    background-color: var(--background-color);
     position: absolute;
     border-radius: 0 0 0 100px;
     z-index: -1;
@@ -243,7 +270,7 @@ section {
     font-size: 20px;
     padding-bottom: 20px;
     width: 100%;
-    color: hsl(231, 7%, 65%);
+    color: var(--secondary-color);
   }
   .btn-div {
     flex-wrap: nowrap;
